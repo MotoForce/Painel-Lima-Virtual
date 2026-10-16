@@ -1,0 +1,12 @@
+{
+  "name": "Painel Lima Virtual",
+  "short_name": "Lima Virtual",
+  "description": "Portal de acesso a projetos e sistemas digitais",
+  "lang": "pt-BR",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#07121e",
+  "theme_color": "#07121e",
+  "icons": [{"src":"./assets/logo.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
