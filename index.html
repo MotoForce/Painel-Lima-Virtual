@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#07121e">
 <meta name="description" content="Painel Lima Virtual: acesso organizado aos seus sistemas e projetos digitais.">
 <meta name="color-scheme" content="dark light">
-<link rel="icon" href="./assets/logo.svg" type="image/svg+xml">
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4IiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+Cjx0aXRsZSBpZD0idGl0bGUiPlBhaW5lbCBMaW1hIFZpcnR1YWw8L3RpdGxlPjxkZXNjIGlkPSJkZXNjIj5Nb25vZ3JhbWEgTFYgY29tIHPDrW1ib2xvIGRlIGNvbmV4w6NvPC9kZXNjPgo8ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9InAiIHgxPSIwIiB4Mj0iMSIgeTE9IjAiIHkyPSIxIj48c3RvcCBzdG9wLWNvbG9yPSIjZmZlOGFlIi8+PHN0b3Agb2Zmc2V0PSIuNTQiIHN0b3AtY29sb3I9IiNkZmFmNjAiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNhODc1MzkiLz48L2xpbmVhckdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCBpZD0iYiIgeDE9IjAiIHgyPSIxIiB5MT0iMCIgeTI9IjEiPjxzdG9wIHN0b3AtY29sb3I9IiMxYjM4NTQiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwYTE3MjciLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz4KPHJlY3Qgd2lkdGg9IjEyOCIgaGVpZ2h0PSIxMjgiIHJ4PSIzMCIgZmlsbD0idXJsKCNiKSIvPjxyZWN0IHg9IjciIHk9IjciIHdpZHRoPSIxMTQiIGhlaWdodD0iMTE0IiByeD0iMjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNwKSIgc3Ryb2tlLXdpZHRoPSIyLjUiLz48cGF0aCBkPSJNMzIgMzV2NTJoMjhNNjYgMzVsMTYgNTEgMTYtNTEiIHN0cm9rZT0idXJsKCNwKSIgc3Ryb2tlLXdpZHRoPSIxMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBmaWxsPSJub25lIi8+PGNpcmNsZSBjeD0iMTAwIiBjeT0iOTQiIHI9IjUiIGZpbGw9IiM5ZWQ3ZWUiLz48Y2lyY2xlIGN4PSI4OCIgY3k9IjEwNCIgcj0iMyIgZmlsbD0iI2RjYjE2ZCIvPjxwYXRoIGQ9Ik05NCA5OGwtNiA2IiBzdHJva2U9IiNkY2IxNmQiIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4K" type="image/svg+xml">
 <link rel="manifest" href="./manifest.webmanifest">
 <title>painel.limavirtual.online | Painel Lima Virtual</title>
 <style>
@@ -39,12 +39,31 @@
 .gate-input-row button{min-width:80px}.gate-submit{width:100%;margin-top:5px;padding:13px}
 .gate-feedback{font-size:13px;min-height:22px;margin:0;color:#ffc6bb;line-height:1.45}.gate-footnote{font-size:11px;color:#a0b5c9;margin:20px 0 0}
 @media(max-width:450px){.gate-input-row{flex-wrap:wrap}.gate-input-row button{width:100%}}
+
+/* V2.1.2 — cabeçalho sem links inválidos e identidade consistente */
+.sidebar .brand{cursor:default}.sidebar .brand-title{font-size:16px;overflow-wrap:anywhere}
+.sidebar .brand-caption{letter-spacing:.10em;font-size:9px}
+.topbar-identity{display:flex;align-items:center;gap:12px;min-width:0}
+.topbar-logo{width:43px;height:43px;flex-shrink:0;border-radius:12px}
+.topbar-info{display:flex;flex-direction:column;min-width:0;gap:1px}
+.topbar-title{font-size:16px;line-height:1.25;letter-spacing:-.02em;color:var(--ink)}
+.topbar-domain{display:block;font-size:12px;white-space:normal;overflow-wrap:anywhere}
+.topbar-info .status{margin-top:2px}
+@media(max-width:780px){.topbar{gap:8px;min-height:82px}.topbar-identity{gap:9px}.topbar-logo{width:37px;height:37px}.topbar-title{font-size:14px}.topbar-domain{font-size:11px}.topbar-info .status{display:none}}
+@media(max-width:400px){.topbar-logo{width:32px;height:32px}.topbar-title{font-size:13px}.topbar-domain{font-size:10px}.top-actions{gap:5px}.top-actions .btn{padding:8px}.top-actions .btn.icon-only{width:34px;height:34px}.logout-label{display:none}}
+
+/* V2.2: administração remota opcional e tela de login responsiva */
+.admin-login{border:1px solid #5c7690;border-radius:18px;padding:20px;background:#102638;margin:17px 0}
+.admin-login label{display:block;color:#cfdfed;font-size:13px;font-weight:700;margin:8px 0}
+.admin-login-row{display:flex;gap:10px}.admin-login input{flex:1;min-width:0;border:1px solid #547087;border-radius:10px;background:#092031;padding:12px;color:white}
+#adminLoginFeedback.error{color:#ffb2ac}
+@media(max-width:440px){.admin-login-row{flex-direction:column}}
 </style>
 </head>
 <body>
 <section class="gate" id="accessGate" aria-labelledby="gateTitle">
   <div class="gate-card">
-    <img class="gate-brand" src="./assets/logo.svg" alt="Lima Virtual">
+    <img class="gate-brand" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4IiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+Cjx0aXRsZSBpZD0idGl0bGUiPlBhaW5lbCBMaW1hIFZpcnR1YWw8L3RpdGxlPjxkZXNjIGlkPSJkZXNjIj5Nb25vZ3JhbWEgTFYgY29tIHPDrW1ib2xvIGRlIGNvbmV4w6NvPC9kZXNjPgo8ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9InAiIHgxPSIwIiB4Mj0iMSIgeTE9IjAiIHkyPSIxIj48c3RvcCBzdG9wLWNvbG9yPSIjZmZlOGFlIi8+PHN0b3Agb2Zmc2V0PSIuNTQiIHN0b3AtY29sb3I9IiNkZmFmNjAiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNhODc1MzkiLz48L2xpbmVhckdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCBpZD0iYiIgeDE9IjAiIHgyPSIxIiB5MT0iMCIgeTI9IjEiPjxzdG9wIHN0b3AtY29sb3I9IiMxYjM4NTQiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwYTE3MjciLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz4KPHJlY3Qgd2lkdGg9IjEyOCIgaGVpZ2h0PSIxMjgiIHJ4PSIzMCIgZmlsbD0idXJsKCNiKSIvPjxyZWN0IHg9IjciIHk9IjciIHdpZHRoPSIxMTQiIGhlaWdodD0iMTE0IiByeD0iMjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNwKSIgc3Ryb2tlLXdpZHRoPSIyLjUiLz48cGF0aCBkPSJNMzIgMzV2NTJoMjhNNjYgMzVsMTYgNTEgMTYtNTEiIHN0cm9rZT0idXJsKCNwKSIgc3Ryb2tlLXdpZHRoPSIxMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBmaWxsPSJub25lIi8+PGNpcmNsZSBjeD0iMTAwIiBjeT0iOTQiIHI9IjUiIGZpbGw9IiM5ZWQ3ZWUiLz48Y2lyY2xlIGN4PSI4OCIgY3k9IjEwNCIgcj0iMyIgZmlsbD0iI2RjYjE2ZCIvPjxwYXRoIGQ9Ik05NCA5OGwtNiA2IiBzdHJva2U9IiNkY2IxNmQiIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4K" alt="Lima Virtual">
     <p class="gate-overline">ACESSO AO PORTAL</p>
     <h1 id="gateTitle">Painel Lima Virtual</h1>
     <p class="gate-description">Seus sistemas organizados em um só lugar. Informe o token de acesso para entrar.</p>
@@ -62,34 +81,37 @@
 </section>
 <div class="app-shell" id="portalShell" hidden>
 <aside class="sidebar" aria-label="Menu lateral">
-  <a class="brand" href="./" aria-label="Painel Lima Virtual, início"><img class="brand-mark" src="./assets/logo.svg" alt=""><span><span class="brand-title" style="display:block">Lima Virtual</span><span class="brand-caption">PAINEL DIGITAL</span></span></a>
+  <div class="brand" aria-label="Identidade do Painel Lima Virtual"><img class="brand-mark" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4IiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+Cjx0aXRsZSBpZD0idGl0bGUiPlBhaW5lbCBMaW1hIFZpcnR1YWw8L3RpdGxlPjxkZXNjIGlkPSJkZXNjIj5Nb25vZ3JhbWEgTFYgY29tIHPDrW1ib2xvIGRlIGNvbmV4w6NvPC9kZXNjPgo8ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9InAiIHgxPSIwIiB4Mj0iMSIgeTE9IjAiIHkyPSIxIj48c3RvcCBzdG9wLWNvbG9yPSIjZmZlOGFlIi8+PHN0b3Agb2Zmc2V0PSIuNTQiIHN0b3AtY29sb3I9IiNkZmFmNjAiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNhODc1MzkiLz48L2xpbmVhckdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCBpZD0iYiIgeDE9IjAiIHgyPSIxIiB5MT0iMCIgeTI9IjEiPjxzdG9wIHN0b3AtY29sb3I9IiMxYjM4NTQiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwYTE3MjciLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz4KPHJlY3Qgd2lkdGg9IjEyOCIgaGVpZ2h0PSIxMjgiIHJ4PSIzMCIgZmlsbD0idXJsKCNiKSIvPjxyZWN0IHg9IjciIHk9IjciIHdpZHRoPSIxMTQiIGhlaWdodD0iMTE0IiByeD0iMjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNwKSIgc3Ryb2tlLXdpZHRoPSIyLjUiLz48cGF0aCBkPSJNMzIgMzV2NTJoMjhNNjYgMzVsMTYgNTEgMTYtNTEiIHN0cm9rZT0idXJsKCNwKSIgc3Ryb2tlLXdpZHRoPSIxMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBmaWxsPSJub25lIi8+PGNpcmNsZSBjeD0iMTAwIiBjeT0iOTQiIHI9IjUiIGZpbGw9IiM5ZWQ3ZWUiLz48Y2lyY2xlIGN4PSI4OCIgY3k9IjEwNCIgcj0iMyIgZmlsbD0iI2RjYjE2ZCIvPjxwYXRoIGQ9Ik05NCA5OGwtNiA2IiBzdHJva2U9IiNkY2IxNmQiIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4K" alt=""><span><span class="brand-title" style="display:block">Painel Lima Virtual</span><span class="brand-caption">PORTAL DE APLICAÇÕES</span></span></div>
   <div><p class="sidebar-label">Explorar</p><nav class="nav-list" id="navDesktop" aria-label="Seções"></nav></div>
   <div class="side-bottom"><strong>Seu portal. Seus projetos.</strong><p>Inclua atalhos para sites e sistemas HTML já publicados.</p><button class="btn gold" type="button" data-action="settings">＋ Gerenciar atalhos</button></div>
-  <div class="side-foot">Painel Lima Virtual • versão 2.1.1</div>
+  <div class="side-foot">Painel Lima Virtual • versão 2.2.1</div>
 </aside>
 <div class="main">
-  <header class="topbar"><div><div class="topbar-domain">painel.limavirtual.online</div><div class="status"><span class="dot" aria-hidden="true"></span><span id="siteStatus">Portal de acesso a sistemas</span></div></div><div class="top-actions"><button class="btn only-mobile settings-text" data-action="settings" type="button" aria-label="Gerenciar atalhos"><span aria-hidden="true">⚙</span> Gerenciar</button><button class="btn" id="logoutBtn" type="button" title="Sair e bloquear o painel" aria-label="Sair do painel">⇥ <span class="logout-label">Sair</span></button><button class="btn icon-only" id="themeBtn" type="button" aria-label="Alternar contraste" title="Alternar contraste">◐</button></div></header>
+  <header class="topbar"><div class="topbar-identity"><img class="topbar-logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4IiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+Cjx0aXRsZSBpZD0idGl0bGUiPlBhaW5lbCBMaW1hIFZpcnR1YWw8L3RpdGxlPjxkZXNjIGlkPSJkZXNjIj5Nb25vZ3JhbWEgTFYgY29tIHPDrW1ib2xvIGRlIGNvbmV4w6NvPC9kZXNjPgo8ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9InAiIHgxPSIwIiB4Mj0iMSIgeTE9IjAiIHkyPSIxIj48c3RvcCBzdG9wLWNvbG9yPSIjZmZlOGFlIi8+PHN0b3Agb2Zmc2V0PSIuNTQiIHN0b3AtY29sb3I9IiNkZmFmNjAiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNhODc1MzkiLz48L2xpbmVhckdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCBpZD0iYiIgeDE9IjAiIHgyPSIxIiB5MT0iMCIgeTI9IjEiPjxzdG9wIHN0b3AtY29sb3I9IiMxYjM4NTQiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwYTE3MjciLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz4KPHJlY3Qgd2lkdGg9IjEyOCIgaGVpZ2h0PSIxMjgiIHJ4PSIzMCIgZmlsbD0idXJsKCNiKSIvPjxyZWN0IHg9IjciIHk9IjciIHdpZHRoPSIxMTQiIGhlaWdodD0iMTE0IiByeD0iMjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNwKSIgc3Ryb2tlLXdpZHRoPSIyLjUiLz48cGF0aCBkPSJNMzIgMzV2NTJoMjhNNjYgMzVsMTYgNTEgMTYtNTEiIHN0cm9rZT0idXJsKCNwKSIgc3Ryb2tlLXdpZHRoPSIxMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBmaWxsPSJub25lIi8+PGNpcmNsZSBjeD0iMTAwIiBjeT0iOTQiIHI9IjUiIGZpbGw9IiM5ZWQ3ZWUiLz48Y2lyY2xlIGN4PSI4OCIgY3k9IjEwNCIgcj0iMyIgZmlsbD0iI2RjYjE2ZCIvPjxwYXRoIGQ9Ik05NCA5OGwtNiA2IiBzdHJva2U9IiNkY2IxNmQiIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4K" alt=""><div class="topbar-info"><strong class="topbar-title">Painel Lima Virtual</strong><span class="topbar-domain">painel.limavirtual.online</span><span class="status"><span class="dot" aria-hidden="true"></span><span id="siteStatus">Portal de acesso a sistemas</span></span></div></div><div class="top-actions"><button class="btn only-mobile settings-text" data-action="settings" type="button" aria-label="Gerenciar atalhos"><span aria-hidden="true">⚙</span> Gerenciar</button><button class="btn" id="logoutBtn" type="button" title="Sair e bloquear o painel" aria-label="Sair do painel">⇥ <span class="logout-label">Sair</span></button><button class="btn icon-only" id="themeBtn" type="button" aria-label="Alternar contraste" title="Alternar contraste">◐</button></div></header>
   <nav class="mobile-nav" id="navMobile" aria-label="Seções" hidden></nav>
   <main>
-    <section class="hero" aria-labelledby="heroTitle"><div><div class="eyebrow">PORTAL DE APLICAÇÕES</div><h1 id="heroTitle">Suas soluções, <span>em um só lugar.</span></h1><p>Acesse seus projetos e sistemas com agilidade. Organize seus atalhos, marque favoritos e encontre o que precisa.</p></div><div class="hero-emblem" aria-hidden="true"><img src="./assets/logo.svg" alt=""></div></section>
+    <section class="hero" aria-labelledby="heroTitle"><div><div class="eyebrow">PORTAL DE APLICAÇÕES</div><h1 id="heroTitle">Suas soluções, <span>em um só lugar.</span></h1><p>Acesse seus projetos e sistemas com agilidade. Organize seus atalhos, marque favoritos e encontre o que precisa.</p></div><div class="hero-emblem" aria-hidden="true"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4IiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+Cjx0aXRsZSBpZD0idGl0bGUiPlBhaW5lbCBMaW1hIFZpcnR1YWw8L3RpdGxlPjxkZXNjIGlkPSJkZXNjIj5Nb25vZ3JhbWEgTFYgY29tIHPDrW1ib2xvIGRlIGNvbmV4w6NvPC9kZXNjPgo8ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9InAiIHgxPSIwIiB4Mj0iMSIgeTE9IjAiIHkyPSIxIj48c3RvcCBzdG9wLWNvbG9yPSIjZmZlOGFlIi8+PHN0b3Agb2Zmc2V0PSIuNTQiIHN0b3AtY29sb3I9IiNkZmFmNjAiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNhODc1MzkiLz48L2xpbmVhckdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCBpZD0iYiIgeDE9IjAiIHgyPSIxIiB5MT0iMCIgeTI9IjEiPjxzdG9wIHN0b3AtY29sb3I9IiMxYjM4NTQiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwYTE3MjciLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz4KPHJlY3Qgd2lkdGg9IjEyOCIgaGVpZ2h0PSIxMjgiIHJ4PSIzMCIgZmlsbD0idXJsKCNiKSIvPjxyZWN0IHg9IjciIHk9IjciIHdpZHRoPSIxMTQiIGhlaWdodD0iMTE0IiByeD0iMjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNwKSIgc3Ryb2tlLXdpZHRoPSIyLjUiLz48cGF0aCBkPSJNMzIgMzV2NTJoMjhNNjYgMzVsMTYgNTEgMTYtNTEiIHN0cm9rZT0idXJsKCNwKSIgc3Ryb2tlLXdpZHRoPSIxMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBmaWxsPSJub25lIi8+PGNpcmNsZSBjeD0iMTAwIiBjeT0iOTQiIHI9IjUiIGZpbGw9IiM5ZWQ3ZWUiLz48Y2lyY2xlIGN4PSI4OCIgY3k9IjEwNCIgcj0iMyIgZmlsbD0iI2RjYjE2ZCIvPjxwYXRoIGQ9Ik05NCA5OGwtNiA2IiBzdHJva2U9IiNkY2IxNmQiIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4K" alt=""></div></section>
     <section class="metrics" aria-label="Resumo do painel"><div class="metric"><span class="metric-icon" aria-hidden="true">▦</span><span><strong id="totalApps">0</strong><small>Aplicativos</small></span></div><div class="metric"><span class="metric-icon" aria-hidden="true">★</span><span><strong id="favTotal">0</strong><small>Favoritos</small></span></div><div class="metric"><span class="metric-icon" aria-hidden="true">▤</span><span><strong id="catTotal">0</strong><small>Categorias</small></span></div></section>
     <div class="content-head"><div><h2 class="section-label" id="listTitle">Biblioteca de aplicações</h2><p class="section-sub" id="listSubtitle">Escolha um sistema para abrir.</p></div><div class="search-area"><button class="btn icon-only" id="viewBtn" type="button" aria-label="Alternar visualização" title="Alternar entre cartões e lista">☷</button></div></div>
     <div class="search-wrap"><input id="search" type="search" maxlength="140" placeholder="Pesquisar por nome, categoria ou assunto..." autocomplete="off" aria-label="Pesquisar aplicativos"><span class="keyhint">Ctrl K</span></div>
     <div class="filters" id="categoryFilters" aria-label="Filtrar por categoria"></div>
     <div class="grid" id="grid" aria-live="polite" aria-atomic="false"></div>
     <div class="no-results" id="empty" hidden><div aria-hidden="true" style="font-size:29px">⌕</div><strong id="emptyTitle">Nenhum aplicativo encontrado</strong><p id="emptyMessage">Tente outro termo ou escolha uma categoria diferente.</p><button class="btn" id="clearFilters" type="button">Mostrar todos</button></div>
-    <div class="hintbox"><div><strong>Pronto para reunir mais projetos?</strong><p>Cadastre os endereços das páginas que já estão hospedadas, exporte o arquivo e publique no servidor.</p></div><button class="btn" data-action="settings" type="button">⚙ Configurar atalhos</button></div>
+    <div class="hintbox"><div><strong>Pronto para reunir mais projetos?</strong><p>Adicione aplicativos e publique o catálogo permanentemente. Na hospedagem PHP, basta salvar; no GitHub Pages, exporte o arquivo.</p></div><button class="btn" data-action="settings" type="button">⚙ Configurar atalhos</button></div>
   </main>
-  <footer class="foot"><span>© <span id="year"></span> Nailson Rodrigues de Lima. Todos os direitos reservados.</span><span><span aria-label="Painel Lima Virtual">Painel Lima Virtual</span> · v2.1.1</span></footer>
+  <footer class="foot"><span>© <span id="year"></span> Nailson Rodrigues de Lima. Todos os direitos reservados.</span><span><span aria-label="Painel Lima Virtual">Painel Lima Virtual</span> · v2.2</span></footer>
 </div></div>
 <dialog class="modal" id="settings" aria-labelledby="settingsTitle"><div class="modal-head"><h2 id="settingsTitle">Gerenciar atalhos</h2><button class="btn icon-only" id="closeSettings" type="button" aria-label="Fechar configurações">×</button></div><div class="modal-body">
-  <div class="notice"><strong>Editor local, sem autenticação administrativa e sem gravação remota.</strong> As mudanças são apenas uma prévia neste navegador. Para atualizar o painel público, clique em <b>Exportar apps.json</b> e substitua o arquivo no seu serviço de hospedagem. Não adicione links confidenciais.</div>
+  <div class="notice" id="adminNotice"><strong>Identificando hospedagem...</strong> O catálogo é público; a edição permanente requer autenticação administrativa quando o servidor PHP estiver configurado.</div>
+  <div id="adminLogin" hidden class="admin-login"><h3 style="margin:0 0 8px">Área do administrador</h3><p class="guide">Digite a senha de administração configurada na hospedagem UOL. Ela não é o token de entrada do portal.</p><form id="adminLoginForm"><label for="adminPassword">Senha administrativa</label><div class="admin-login-row"><input type="password" id="adminPassword" required autocomplete="current-password" minlength="12" placeholder="Senha administrativa"><button class="btn gold" type="submit" id="adminLoginBtn">Entrar</button></div></form><p class="feedback" id="adminLoginFeedback" role="status" aria-live="polite"></p></div>
+  <div id="editorArea">
   <div class="utility-row" style="margin-top:0"><strong id="editCount">Aplicações configuradas</strong><button class="btn tiny" id="resetDraft" type="button">Recarregar configuração publicada</button></div>
   <div class="editor-list" id="editorList" aria-label="Atalhos cadastrados"></div>
   <h3 id="formTitle" style="font-size:16px;margin:12px 0">Adicionar aplicação</h3>
   <form id="appForm" novalidate><input type="hidden" id="editId"><div class="form-grid"><div class="field"><label for="appName">Nome do aplicativo *</label><input id="appName" type="text" maxlength="65" required placeholder="Ex.: Meu sistema de estudos"></div><div class="field"><label for="appCategory">Categoria *</label><input id="appCategory" type="text" maxlength="35" list="categoryOptions" required placeholder="Ex.: Educação"><datalist id="categoryOptions"></datalist></div><div class="field"><label for="appUrl">Endereço HTTPS *</label><input id="appUrl" type="url" maxlength="2048" required placeholder="https://exemplo.com/sistema/"></div><div class="field"><label for="appIcon">Ícone (emoji)</label><input id="appIcon" type="text" maxlength="12" placeholder="📚"><small>Ex.: 🎓, 📊, 🛠️, 📄, 🚀</small></div><div class="field full"><label for="appDesc">Descrição</label><input id="appDesc" type="text" maxlength="140" placeholder="Uma frase curta sobre a função"></div><div class="field full"><label for="appTags">Palavras-chave (separadas por vírgula)</label><input id="appTags" type="text" maxlength="200" placeholder="aula, educação, concursos"><small>São utilizadas na pesquisa inteligente do painel.</small></div></div><label class="check-row"><input id="appFeatured" type="checkbox"> Destacar nas sugestões</label><div class="modal-actions"><button class="btn gold" type="submit" id="saveApp">＋ Adicionar à prévia</button><button class="btn" type="button" id="cancelEdit" hidden>Cancelar edição</button></div></form>
-  <div class="modal-actions" style="margin-top:23px"><button class="btn gold" type="button" id="exportApps">↓ Exportar apps.json</button><button class="btn" type="button" id="importApps">↑ Importar JSON</button><button class="btn" type="button" id="exportBackup">↓ Backup dos meus favoritos</button><input id="importFile" type="file" accept=".json,application/json" hidden></div>
-  <p id="feedback" class="feedback" role="status" aria-live="polite"></p><p class="guide">Aceita até 250 aplicativos. Importar substitui apenas a prévia atual. O editor não autentica nem controla acesso aos sistemas de destino. Cada sistema deve adotar suas próprias regras de segurança.</p>
+  <div class="modal-actions" style="margin-top:23px"><button class="btn gold" type="button" id="saveRemote" hidden>☁ Salvar permanentemente</button><button class="btn" type="button" id="adminLogout" hidden>Sair da administração</button><button class="btn" type="button" id="exportApps">↓ Exportar apps.json</button><button class="btn" type="button" id="importApps">↑ Importar JSON</button><button class="btn" type="button" id="exportBackup">↓ Backup dos meus favoritos</button><input id="importFile" type="file" accept=".json,application/json" hidden></div>
+  <p id="feedback" class="feedback" role="status" aria-live="polite"></p><p class="guide">Aceita até 250 aplicativos. Alterações são publicadas para todos apenas após Salvar permanentemente (servidor PHP) ou publicação do apps.json (GitHub Pages). O catálogo não protege o conteúdo dos aplicativos: cada sistema precisa de segurança própria.</p>
+  </div>
 </div></dialog>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script>
@@ -98,6 +120,7 @@ const $=id=>document.getElementById(id);
 const fallback=[{id:'projetos-autorais',name:'Projetos autorais',url:'https://limavirtual.online/',icon:'🚀',category:'Projetos',description:'Conheça as soluções digitais disponíveis',tags:['software','aplicativos','portfólio'],featured:true}];
 const K={favorites:'lv2-favorites',recent:'lv2-recent',view:'lv2-view',contrast:'lv2-contrast'};
 let published=[],draft=[],apps=[],favorites=new Set(),recent=[],section='all',category='Todas',query='',view='grid',editing=null,toastTimer;
+let adminMode='unknown',csrfToken='',remoteRevision='',remoteSaving=false;
 const fold=s=>String(s??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('pt-BR').trim();
 const safeGet=(key,def)=>{try{return JSON.parse(localStorage.getItem(key))??def}catch{return def}};
 const save=(key,value)=>{try{localStorage.setItem(key,JSON.stringify(value))}catch{showToast('Armazenamento local indisponível; as preferências não serão salvas.')}};
@@ -127,7 +150,7 @@ function render(){reconcilePreferences();renderNav();renderFilters();$('totalApp
  const titles={all:['Biblioteca de aplicações','Explore todos os sistemas do seu portal.'],favorites:['Meus favoritos','Acesso rápido aos seus atalhos preferidos.'],recent:['Acessados recentemente','Os sistemas que você abriu por último neste navegador.'],featured:['Sugestões para você','Destaques e favoritos, sem recomendações automatizadas externas.']};$('listTitle').textContent=titles[section][0];$('listSubtitle').textContent=titles[section][1];const grid=$('grid');grid.replaceChildren();grid.classList.toggle('list-mode',view==='list');const list=filtered();for(const a of list)grid.append(makeCard(a));$('empty').hidden=list.length>0;if(!list.length){$('emptyTitle').textContent=apps.length?'Nenhuma aplicação nesta seleção':'Seu painel está pronto para receber aplicativos';$('emptyMessage').textContent=apps.length?'Altere a pesquisa, o filtro ou a seção para encontrar seus sistemas.':'Use Gerenciar atalhos para configurar seu primeiro sistema.';}
  $('siteStatus').textContent=`${apps.length} ${apps.length===1?'sistema configurado':'sistemas configurados'}`;
 }
-function resetForm(){$('appForm').reset();$('editId').value='';editing=null;$('formTitle').textContent='Adicionar aplicação';$('saveApp').textContent='＋ Adicionar à prévia';$('cancelEdit').hidden=true;}
+function resetForm(){$('appForm').reset();$('editId').value='';editing=null;$('formTitle').textContent='Adicionar aplicação';$('saveApp').textContent='＋ Adicionar aplicativo';$('cancelEdit').hidden=true;}
 function editorList(){const root=$('editorList');root.replaceChildren();$('editCount').textContent=`${draft.length} ${draft.length===1?'aplicação configurada':'aplicações configuradas'} na prévia`;
  if(!draft.length){root.append(node('p','guide','Nenhum atalho na prévia. Adicione o primeiro abaixo.'));return}
  draft.forEach((a,i)=>{const line=node('div','editor-row');line.append(node('span','editor-icon',a.icon),node('span','editor-name',a.name));const edit=node('button','btn tiny','Editar');edit.type='button';edit.setAttribute('aria-label','Editar '+a.name);edit.addEventListener('click',()=>{editing=a.id;$('editId').value=a.id;$('appName').value=a.name;$('appUrl').value=a.url;$('appIcon').value=a.icon;$('appCategory').value=a.category;$('appDesc').value=a.description;$('appTags').value=a.tags.join(', ');$('appFeatured').checked=a.featured;$('formTitle').textContent='Editar aplicação';$('saveApp').textContent='Salvar edição';$('cancelEdit').hidden=false;$('appName').focus();});
@@ -135,19 +158,78 @@ function editorList(){const root=$('editorList');root.replaceChildren();$('editC
  const down=node('button','btn tiny','↓');down.type='button';down.disabled=i===draft.length-1;down.setAttribute('aria-label','Mover '+a.name+' para baixo');down.addEventListener('click',()=>{[draft[i+1],draft[i]]=[draft[i],draft[i+1]];draftChanged();});
  const del=node('button','btn tiny danger','✕');del.type='button';del.setAttribute('aria-label','Excluir '+a.name);del.addEventListener('click',()=>{if(!confirm('Remover "'+a.name+'" da prévia local?'))return;draft.splice(i,1);if(editing===a.id)resetForm();draftChanged();});line.append(edit,up,down,del);root.append(line)});
  const cats=new Set(draft.map(x=>x.category));const opts=$('categoryOptions');opts.replaceChildren();for(const c of cats){const o=node('option');o.value=c;opts.append(o)}}
-function draftChanged(){apps=draft.map(a=>({...a}));editorList();render();setFeedback('Prévia atualizada. Exporte apps.json para publicar as alterações.','warn')}
+function draftChanged(){apps=draft.map(a=>({...a}));editorList();render();setFeedback(adminMode==='authenticated'?'Rascunho atualizado. Clique em Salvar permanentemente para publicar.':'Rascunho atualizado. Exporte apps.json e publique na hospedagem.','warn')}
 function newId(name){let base=fold(name).replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,55)||'app';let id=base,i=2;while(draft.some(a=>a.id===id))id=base+'-'+i++;return id}
 function exportJson(filename,value){const blob=new Blob([JSON.stringify(value,null,2)+'\n'],{type:'application/json;charset=utf-8'});const u=URL.createObjectURL(blob);const a=node('a');a.href=u;a.download=filename;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),3000)}
-function installHandlers(){document.querySelectorAll('[data-action="settings"]').forEach(b=>b.addEventListener('click',()=>{editorList();setFeedback('');$('settings').showModal()}));$('closeSettings').addEventListener('click',()=>$('settings').close());$('settings').addEventListener('click',e=>{if(e.target===$('settings'))$('settings').close()});$('cancelEdit').addEventListener('click',resetForm);
+function installHandlers(){document.querySelectorAll('[data-action="settings"]').forEach(b=>b.addEventListener('click',()=>{editorList();setFeedback('');$('settings').showModal();checkAdmin();}));$('closeSettings').addEventListener('click',()=>$('settings').close());$('settings').addEventListener('click',e=>{if(e.target===$('settings'))$('settings').close()});$('cancelEdit').addEventListener('click',resetForm);
  $('appForm').addEventListener('submit',e=>{e.preventDefault();try{if(!editing&&draft.length>=250)throw Error('Limite de 250 aplicativos atingido.');const name=$('appName').value.trim(),url=$('appUrl').value.trim(),cat=$('appCategory').value.trim();if(!cat)throw Error('Informe uma categoria.');const payload={id:editing||newId(name),name,url,category:cat,icon:$('appIcon').value.trim()||'🔗',description:$('appDesc').value,tags:$('appTags').value.split(',').map(s=>s.trim()).filter(Boolean),featured:$('appFeatured').checked};const a=normalize(payload,0);const current=draft.findIndex(x=>x.id===editing);if(current>=0)draft[current]=a;else draft.push(a);resetForm();draftChanged()}catch(err){setFeedback(err.message,'error')}});
- $('resetDraft').addEventListener('click',()=>{if(!confirm('Descartar alterações na prévia e recarregar a lista publicada?'))return;draft=published.map(a=>({...a,tags:[...a.tags]}));resetForm();draftChanged();});
- $('exportApps').addEventListener('click',()=>{exportJson('apps.json',draft);setFeedback('Arquivo apps.json exportado. Publique-o na raiz do portal.');});
+ $('resetDraft').addEventListener('click',async()=>{if(!confirm('Descartar alterações no rascunho e recarregar o catálogo publicado?'))return;try{const res=await fetch('./apps.json',{cache:'no-store'});if(!res.ok)throw Error('Não foi possível consultar apps.json.');published=validateList(await res.json());if(adminMode==='authenticated'){const state=await apiCall('status');remoteRevision=state.revision||'';}draft=published.map(a=>({...a,tags:[...a.tags]}));resetForm();draftChanged();setFeedback('Catálogo publicado recarregado.','ok');}catch(err){setFeedback(err.message,'error')}});
+ $('exportApps').addEventListener('click',()=>{exportJson('apps.json',draft);setFeedback('Arquivo apps.json exportado. Publique-o na raiz do portal para disponibilizar a todos.');});
+ $('saveRemote').addEventListener('click',saveCatalog);$('adminLoginForm').addEventListener('submit',doAdminLogin);$('adminLogout').addEventListener('click',doAdminLogout);
  $('exportBackup').addEventListener('click',()=>{exportJson('meus-favoritos-painel.json',{favorites:[...favorites],recent});setFeedback('Backup local exportado; ele não é necessário para publicar a lista de aplicativos.');});
  $('importApps').addEventListener('click',()=>$('importFile').click());$('importFile').addEventListener('change',async e=>{const f=e.target.files?.[0];e.target.value='';if(!f)return;try{if(f.size>300000)throw Error('Arquivo muito grande (máximo 300 KB).');const x=validateList(JSON.parse(await f.text()));draft=x;resetForm();draftChanged();setFeedback('JSON importado para a prévia. Exporte apps.json para publicar.')}catch(err){setFeedback(err.message,'error')}});
  $('search').addEventListener('input',e=>{query=e.target.value.trim();render()});$('clearFilters').addEventListener('click',()=>{section='all';category='Todas';query='';$('search').value='';render()});
  $('viewBtn').addEventListener('click',()=>{view=view==='grid'?'list':'grid';save(K.view,view);$('viewBtn').textContent=view==='list'?'▦':'☷';$('viewBtn').title=view==='list'?'Visualizar cartões':'Visualizar lista';render()});
  document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();if(!$('settings').open){$('search').focus();$('search').select()}}});
  $('themeBtn').addEventListener('click',()=>{document.body.classList.toggle('high-contrast');save(K.contrast,document.body.classList.contains('high-contrast'));showToast(document.body.classList.contains('high-contrast')?'Contraste reforçado ativado.':'Contraste padrão ativado.')});
+}
+
+// Persistência: no GitHub Pages há exportação manual; em PHP há API autenticada.
+const API='./admin/api.php';
+async function apiCall(action,options={}){
+ const config={credentials:'same-origin',cache:'no-store',...options};
+ const res=await fetch(API+(options.method==='POST'?'':'?action='+encodeURIComponent(action)),config);
+ const type=res.headers.get('content-type')||'';
+ if(!type.includes('application/json'))throw Error('API PHP indisponível nesta hospedagem.');
+ let body;try{body=await res.json()}catch{throw Error('Resposta inesperada do servidor.');}
+ if(!res.ok){const ex=Error(body.error||'Falha no servidor.');ex.status=res.status;throw ex;}
+ return body;
+}
+function adminScreen(){
+ const configured=adminMode==='authenticated'||adminMode==='locked';
+ $('adminLogin').hidden=adminMode!=='locked';$('editorArea').hidden=adminMode==='locked';
+ $('saveRemote').hidden=adminMode!=='authenticated';$('adminLogout').hidden=adminMode!=='authenticated';
+ const notice=$('adminNotice');
+ if(adminMode==='authenticated')notice.textContent='Modo UOL/PHP: administração autenticada. Edite os aplicativos e clique em Salvar permanentemente. O catálogo publicado ficará disponível em qualquer dispositivo.';
+ else if(adminMode==='locked')notice.textContent='Modo UOL/PHP: para alterar o catálogo permanente, entre com a senha administrativa. O token de visitante não permite editar o servidor.';
+ else if(adminMode==='not-configured')notice.textContent='Servidor PHP encontrado, mas falta concluir a instalação. Abra /admin/setup.php neste domínio. Enquanto isso, é possível exportar apps.json manualmente.';
+ else notice.textContent='Modo estático: GitHub Pages (ou PHP indisponível). Você pode organizar uma prévia e exportar apps.json para publicar no GitHub ou na UOL. Não existe gravação automática neste modo.';
+ if(!configured)$('adminLoginFeedback').textContent='';
+}
+async function checkAdmin(){
+ adminMode='checking';$('adminNotice').textContent='Verificando a administração segura…';
+ $('editorArea').hidden=true;$('adminLogin').hidden=true;
+ try{
+  const s=await apiCall('status');
+  adminMode=s.enabled?(s.authenticated?'authenticated':'locked'):'not-configured';
+  if(s.authenticated){csrfToken=s.csrf||'';remoteRevision=s.revision||'';}
+ }catch{adminMode='static';}
+ adminScreen();
+}
+async function doAdminLogin(e){
+ e.preventDefault();$('adminLoginBtn').disabled=true;
+ $('adminLoginFeedback').textContent='Autenticando…';$('adminLoginFeedback').className='feedback';
+ try{
+  const s=await apiCall('login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'login',password:$('adminPassword').value})});
+  csrfToken=s.csrf;remoteRevision=s.revision;adminMode='authenticated';$('adminPassword').value='';
+  const res=await fetch('./apps.json',{cache:'no-store'});if(!res.ok)throw Error('Não foi possível carregar o catálogo publicado.');
+  published=validateList(await res.json());draft=published.map(a=>({...a,tags:[...a.tags]}));apps=draft.map(a=>({...a}));resetForm();editorList();render();adminScreen();setFeedback('Autenticação confirmada. Faça suas alterações e salve permanentemente.');
+ }catch(err){$('adminLoginFeedback').textContent=err.message; $('adminLoginFeedback').className='feedback error';if(adminMode==='authenticated')adminScreen();}
+ finally{$('adminLoginBtn').disabled=false;}
+}
+async function doAdminLogout(){
+ try{await apiCall('logout',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'logout',csrf:csrfToken})})}catch{}
+ csrfToken='';remoteRevision='';adminMode='locked';adminScreen();setFeedback('Administração encerrada.');
+}
+async function saveCatalog(){
+ if(adminMode!=='authenticated'||remoteSaving)return;
+ remoteSaving=true;$('saveRemote').disabled=true;setFeedback('Salvando catálogo na hospedagem…','warn');
+ try{
+  const reply=await apiCall('save',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'save',apps:draft,revision:remoteRevision,csrf:csrfToken})});
+  remoteRevision=reply.revision;published=draft.map(a=>({...a,tags:[...a.tags]}));apps=published.map(a=>({...a}));render();
+  setFeedback('Catálogo salvo no servidor. '+published.length+' aplicativos estarão disponíveis após recarregar a página.');showToast('Catálogo publicado permanentemente.');
+ }catch(err){if(err.status===409)setFeedback('O catálogo foi alterado em outra sessão. Recarregue a configuração publicada antes de salvar novamente.','error');else if(err.status===401){adminMode='locked';adminScreen();setFeedback('Sessão expirada. Entre novamente na administração.','error');}else setFeedback('Não foi possível gravar: '+err.message,'error');}
+ finally{remoteSaving=false;$('saveRemote').disabled=false;}
 }
 const style=node('style');style.textContent='body.high-contrast{--muted:#d3e0ee;--border:#72889d;--gold:#ffe2a3}body.high-contrast .card,body.high-contrast .chip,body.high-contrast .btn{border-color:#809aaf}body.high-contrast .card p,body.high-contrast .section-sub,body.high-contrast .metric small{color:#edf5ff}';document.head.append(style);
 async function start(){$('year').textContent=new Date().getFullYear();const savedFav=safeGet(K.favorites,[]);favorites=new Set(Array.isArray(savedFav)?savedFav.filter(x=>typeof x==='string'):[]);const savedRec=safeGet(K.recent,[]);recent=Array.isArray(savedRec)?savedRec.filter(r=>r&&typeof r.id==='string'):[];view=safeGet(K.view,'grid')==='list'?'list':'grid';$('viewBtn').textContent=view==='list'?'▦':'☷';if(safeGet(K.contrast,false))document.body.classList.add('high-contrast');installHandlers();
@@ -171,7 +253,8 @@ function unlockPortal(){
   $('accessGate').hidden=true;$('portalShell').hidden=false;
   if(!portalStarted){portalStarted=true;start().catch(()=>{showToast('Não foi possível carregar o painel. Atualize a página.');});}
 }
-function signOut(){
+async function signOut(){
+  if(adminMode==='authenticated'){try{await apiCall('logout',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'logout',csrf:csrfToken})})}catch{};csrfToken='';remoteRevision='';adminMode='locked';}
   try{sessionStorage.removeItem(AUTH_KEY)}catch{}
   if($('settings').open)$('settings').close();
   $('portalShell').hidden=true;$('accessGate').hidden=false;
