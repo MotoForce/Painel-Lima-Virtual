@@ -1,0 +1,8 @@
+IA Estendida — correção parcial de autenticação/progresso
+Projeto identificado pelo usuário: piagfpnjiwpngbikkkfp (Painel-Lima-Virtual).
+Diagnóstico executado: não havia tabela public.iae_student_state nem funções get_student_state() / save_student_state(jsonb).
+IMPORTANTE: correção PREPARADA, NÃO EXECUTADA. Fazer backup do projeto antes.
+No SQL Editor do projeto certo, executar 01_instalar_progresso.sql; em seguida 02_verificar_instalacao.sql.
+Depois testar com uma conta real no aplicativo; verificar isolamento entre alunos.
+Não modifica outros aplicativos. Não instala funcionalidades de certificados; schema original da V2 contém outras funções que exigem revisão de segurança e validação institucional.
+Não rodar o schema antigo inteiro no projeto compartilhado sem auditoria.
